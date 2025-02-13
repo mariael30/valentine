@@ -7,88 +7,121 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
-    <title>SURPRISE!!!</title>
-</head>
-<style>
-    * {
+    <title>looooveee</title>
+    <style>
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         .poppins-regular {
             font-family: "Poppins", serif;
-            font-weight: 400;
+            font-weight: 200;
             font-style: normal;
         }
         body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #000000;
-            font-family: "Poppins", serif;
-            font-size: 15px;
-            text-align: center;
-        }
-        p{
-            font-family: 'Courier New', Courier, monospace;
-        }
-        .container {
-            margin-top: 20px;
-            /* position: relative; */
-            width: 80%;
-            max-width: 900px;
-            margin: auto;
-        }
-        .photo-text {
-            margin-top: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #000000;
-            position: relative;
-        }
-        .photo-container {
-            margin-top: 20px;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: center;
-            gap: 10px;
+            align-items: center;
+            height: 100vh;
+            font-size: small;
+            text-align: center;
+            height: 100vh;
+            background-image: url('bgbg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: "Poppins", serif;
+        }   
+        h1{
+            text-align: center;
         }
-        .photo {
-            width: 300px;
-            height: 200px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        .note {
+            margin-top: 40px;
+            padding: 50px;
+            width: 350px;
+            color: aliceblue;
+            background-color: #2a2727;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            transform: rotate(-3deg);
+            font-size: 1rem;
+            font-family: "Poppins", serif;
+            border-radius: 5px;
+            position: relative;
+            justify-content: center;
+            align-items: center;
         }
+        .note::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.2) 40%, transparent 50%);
+            border-radius: 50%;
+        }
+        .btn1 {
+    margin-top: 20px;
+    font-size: small; /* Ukuran font yang sedikit lebih besar */
+    background-color: #ea0000;
+    color: white;
+    padding: 10px 20px; /* Ukuran padding lebih besar untuk tombol yang lebih besar */
+    border: none;
+    border-radius: 30px; /* Sudut tombol yang lebih membulat */
+    font-family: "Poppins", serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Transisi halus untuk perubahan efek */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan tombol */
+    text-transform: uppercase; /* Membuat tulisan menjadi kapital semua */
+}
+.btn1:hover {
+    background-color: #3700b3; /* Warna latar belakang berubah saat hover */
+    transform: scale(1.1); /* Membesarkan tombol sedikit saat hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Bayangan lebih kuat saat hover */
+}
+.btn1:active {
+    background-color: #2900a3; /* Warna latar belakang saat tombol ditekan */
+    transform: scale(0.95); /* Menyusutkan tombol sedikit saat ditekan */
+}
     </style>
 </head>
 <body>
-    <h1>Hi baby!</h1>
-    <h2>So, I made this website for you. Happy Valentine's, love.</h2>                                                                                                          
-    
-    <div class="container">
-        <video class="video" autoplay loop id="myVideo">
-            <source src="vid.mp4" type="video/mp4">
-        </video>
+    <h1>Hi!</h1>
+    <h2>answer this questions before u can get ur gift :p</h2>
+    <div class="note">
+        are u DaAaaYyyY???!!!!!
     </div>
-    
-    <h1 class="photo-text">Some of our sweet moments together ❤️</h1>
-    
-    <div class="photo-container">
-        <img src="1.jpg" alt="Foto 1" class="photo">
-        <img src="2.jpg" alt="Foto 2" class="photo">
-        <img src="3.jpg" alt="Foto 3" class="photo">
-        <img src="4.jpg" alt="Foto 4" class="photo">
-        <img src="https://via.placeholder.com/300x200" alt="Foto 5" class="photo">
-        <img src="https://via.placeholder.com/300x200" alt="Foto 6" class="photo">
-        <img src="https://via.placeholder.com/300x200" alt="Foto 7" class="photo">
-        <img src="https://via.placeholder.com/300x200" alt="Foto 8" class="photo">
+    <div class="btn1" onclick="moveButton()">
+       YES!
     </div>
-
-    <h2 class="photo-text">Things i wanna say to you but i can't</h2>
-    <p>Hi, baby. </p>
+    <script>
+        let clickCount = 0;
+        function moveButton() {
+            clickCount++;
+            const button = document.querySelector(".btn1");
+            const note = document.querySelector(".note");
+            const newX = Math.random() * 100;
+                const newY = Math.random() * 100;
+                button.style.transform = `translate(${newX}px, ${newY}px)`;
+            if (clickCount === 1) {
+                // Ubah teks setelah tombol pertama kali ditekan
+                note.textContent = "so, u are my girlfriend???!!";
+            } else if (clickCount === 2) {
+                note.textContent = "YAAYYY! do u love me????";
+            } else if (clickCount === 3) {
+                note.textContent = "owssiitt, here is ur gift baby!!!";
+            } else if (clickCount <= 4) {
+                note.textContent = ":p click one more!";
+                // Pindah tombol ke lokasi acak
+                
+            } else {
+                // Pindah ke halaman lain setelah 5 klik
+                window.location.href = "gift.html"; // Ganti dengan halaman tujuan
+            }
+        }
+    </script>
 </body>
 </html>

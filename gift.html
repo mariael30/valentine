@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,11 +37,15 @@
             font-family: 'Courier New', Courier, monospace;
         }
         .container {
-            width: 100%;  /* Lebar mengikuti parent container */
-    max-width: 800px; /* Maksimum 800px */
-    height: auto; /* Tinggi menyesuaikan */
-    display: block;
-    margin: auto; 
+            margin-top: 20px;
+            flex-wrap: wrap;  
+            justify-content: center;
+            gap: 10px;
+        }
+        .video {
+            width: 20%;
+            height: 20%;
+            object-fit: cover;
         }
         .photo-text {
             margin-top: 10px;
