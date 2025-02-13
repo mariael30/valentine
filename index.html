@@ -70,32 +70,32 @@
         }
         .btn1 {
     margin-top: 20px;
-    font-size: small; /* Ukuran font yang sedikit lebih besar */
+    font-size: small; 
     background-color: #ea0000;
     color: white;
-    padding: 10px 20px; /* Ukuran padding lebih besar untuk tombol yang lebih besar */
+    padding: 10px 20px; 
     border: none;
-    border-radius: 30px; /* Sudut tombol yang lebih membulat */
+    border-radius: 30px; 
     font-family: "Poppins", serif;
     cursor: pointer;
-    transition: all 0.3s ease-in-out; /* Transisi halus untuk perubahan efek */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan tombol */
-    text-transform: uppercase; /* Membuat tulisan menjadi kapital semua */
+    transition: all 0.3s ease-in-out; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    text-transform: uppercase; 
 }
 .btn1:hover {
-    background-color: #3700b3; /* Warna latar belakang berubah saat hover */
-    transform: scale(1.1); /* Membesarkan tombol sedikit saat hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Bayangan lebih kuat saat hover */
+    background-color: #3700b3; 
+    transform: scale(1.1); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
 }
 .btn1:active {
-    background-color: #2900a3; /* Warna latar belakang saat tombol ditekan */
-    transform: scale(0.95); /* Menyusutkan tombol sedikit saat ditekan */
+    background-color: #2900a3; 
+    transform: scale(0.95); 
 }
     </style>
 </head>
 <body>
     <h1>Hi Love!</h1>
-    <h2>answer this questions before u can get ur gift :p</h2>
+    <h2>answer this questions, and your gift might just be as sweet as me! :p</h2>
     <div class="note">
         are u DaAaaYyyY???!!!!!
     </div>
@@ -109,22 +109,21 @@
             const button = document.querySelector(".btn1");
             const note = document.querySelector(".note");
             const newX = Math.random() * 100;
-                const newY = Math.random() * 100;
+            const newY = Math.random() * 100;
                 button.style.transform = `translate(${newX}px, ${newY}px)`;
             if (clickCount === 1) {
-                // Ubah teks setelah tombol pertama kali ditekan
                 note.textContent = "so, u are my girlfriend???!!";
             } else if (clickCount === 2) {
                 note.textContent = "YAAYYY! do u love me????";
+                button.textContent = "OF COURSE I LOVE YOUUUU";
             } else if (clickCount === 3) {
-                note.textContent = "owssiitt, here is ur gift baby!!!";
+                note.textContent = "I LOVEE YOU MOREEEEEEE, here is ur gift baby!!!";
+                button.textContent = "YAY!!";
             } else if (clickCount <= 4) {
-                note.textContent = ":p click one more!";
-                // Pindah tombol ke lokasi acak
-                
+                note.textContent = ":p hehehe click one more!";
+                button.textContent = "okaaayyy!!!";
             } else {
-                // Pindah ke halaman lain setelah 5 klik
-                window.location.href = "gift.html"; // Ganti dengan halaman tujuan
+                window.location.href = "gift.html"; 
             }
         }
     </script>
