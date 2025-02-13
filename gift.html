@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,13 +30,17 @@
         h1, h2 {
             color: #000000;
             font-family: "Poppins", serif;
+            font-size: 15px;
         }
         p{
             font-family: 'Courier New', Courier, monospace;
         }
         .container {
-            margin-top: 20px;
-            position: relative;
+            width: 100%;  /* Lebar mengikuti parent container */
+    max-width: 800px; /* Maksimum 800px */
+    height: auto; /* Tinggi menyesuaikan */
+    display: block;
+    margin: auto; 
         }
         .photo-text {
             margin-top: 10px;
@@ -66,7 +69,7 @@
     <h2>So, I made this website for you. Happy Valentine's, love.</h2>
     
     <div class="container">
-        <video class="video" autoplay muted loop>
+        <video class="video" autoplay loop id="myVideo">
             <source src="vid.mp4" type="video/mp4">
         </video>
     </div>
@@ -86,5 +89,13 @@
 
     <h2 class="photo-text">Things i wanna say to you but i can't</h2>
     <p>Hi, baby. </p>
+
+    <script>
+        function playVideo() {
+            var video = document.getElementById("myVideo");
+            video.muted = false;
+            video.play();
+        }
+    </script>
 </body>
 </html>
